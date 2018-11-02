@@ -490,7 +490,7 @@ class QRTarget(BaseTarget):
             )
         )
         M = np.dot(M, C)
-        flags = cv2.cv.CV_INTER_LINEAR+cv2.cv.CV_WARP_FILL_OUTLIERS
+        flags = cv2.CV_INTER_LINEAR+cv2.CV_WARP_FILL_OUTLIERS
         self._templateImg = cv2.warpPerspective(overlay_img,
             M,
             dsize=target_shape,
